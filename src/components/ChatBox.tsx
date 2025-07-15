@@ -74,6 +74,7 @@ const ChatBox: React.FC<Props> = ({ currentUserId, contactId }) => {
                 key={msg.id}
                 className={`p-2 rounded-md text-sm max-w-[70%] ${msg.senderId === currentUserId ? "bg-blue-100 self-end ml-auto" : "bg-gray-100"}`}
               >
+                <h2 className="font-medium">Chat with {contactId}</h2>
                 <div>{msg.content}</div>
                 <div className="text-sm text-gray-500 mt-1">
                   {new Date(msg.timestamp).toLocaleTimeString()} {msg.read ? "✓✓" : "✓"}
