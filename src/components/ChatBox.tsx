@@ -25,7 +25,7 @@ const initiateCall = async () => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        to: "+2347071745530", // Replace with receiver's phone number
+        to: "+2348071745530", // Replace with receiver's phone number
       }),
     });
 
