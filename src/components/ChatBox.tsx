@@ -25,7 +25,7 @@ const initiateCall = async () => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        to: "+2348071745530", // Replace with receiver's phone number
+        to: "+2348071745530", 
       }),
     });
 
@@ -142,6 +142,11 @@ const ChatBox: React.FC<Props> = ({ currentUserId, contactId, messages, onSend, 
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => {
+           if (e.key === "Enter") {
+          sendMessage();
+    }
+  }}
               placeholder="Type a message..."
               className="flex-1 bg-transparent text-sm outline-none py-2"
             />
